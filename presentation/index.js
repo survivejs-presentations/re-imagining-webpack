@@ -6,8 +6,8 @@ import mapValues from "lodash/mapValues";
 import {
   Appear,
   BlockQuote,
-  //Cite,
-  CodePane,
+  Cite,
+  //CodePane,
   Deck,
   //Fill,
   Heading,
@@ -16,13 +16,13 @@ import {
   Link,
   List,
   ListItem,
-  Markdown,
+  //Markdown,
   Quote,
-  Slide,
-  Table,
-  TableRow,
-  TableHeaderItem,
-  TableItem
+  Slide
+  //Table,
+  //TableRow,
+  //TableHeaderItem,
+  //TableItem
   //Text
 } from "spectacle";
 
@@ -39,7 +39,9 @@ require("./custom.css");
 
 const slideTransition = ["slide"];
 const images = mapValues({
-  survivejs: require("../images/survivejs.png")
+  survivejs: require("../images/survivejs.png"),
+  webpackPopularity: require("../images/webpack-popularity.png"),
+  webpackMergePopularity: require("../images/webpack-merge-popularity.png")
 }, (v) => v.replace("/", ""));
 
 preloader(images);
@@ -57,135 +59,181 @@ export default class Presentation extends React.Component {
       <Deck transition={slideTransition} transitionDuration={500} theme={theme}>
         <Slide transition={slideTransition} bgColor="secondary">
           <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
-            Template
+            Re-Imagining Webpack
           </Heading>
-        </Slide>
-
-        <Slide transition={slideTransition}>
-          <Heading caps fit size={1}>
-            JavaScript Usage on Sites
-          </Heading>
-          <Markdown>
-        {`
-* 2011 - 38.2%
-* 2013 - 60.4%
-* 2015 - 70.5%
-* 2016 - 73.5%
-* Source: [W3Techs](http://w3techs.com/technologies/history_overview/javascript_library/all/y)
-        `}
-          </Markdown>
-        </Slide>
-
-        <Slide transition={slideTransition}>
-          <Appear fid="1">
-            <Heading size={2} caps fit>
-              Inline JavaScript
-            </Heading>
-          </Appear>
-          <Appear fid="2">
-            <Heading size={2} caps fit textColor="tertiary">
-              AJAX (async)
-            </Heading>
-          </Appear>
-          <Appear fid="3">
-            <Heading size={2} caps fit>
-              Single Page Applications
-            </Heading>
-          </Appear>
-          <Appear fid="3">
-            <Heading size={2} caps fit textColor="tertiary">
-              Universal JavaScript
-            </Heading>
-          </Appear>
-        </Slide>
-
-        <Slide transition={slideTransition} bgColor="black">
-          <BlockQuote>
-            <Quote>Java is to JavaScript as car is to carpet</Quote>
-          </BlockQuote>
-        </Slide>
-
-        <Slide transition={slideTransition}>
-          <Heading caps fit size={1}>
-            Build Tools
-          </Heading>
-          <Layout>
-            <Table>
-              <thead>
-                <TableRow>
-                  <TableHeaderItem>1st Gen.</TableHeaderItem>
-                  <TableHeaderItem>2nd Gen.</TableHeaderItem>
-                  <TableHeaderItem>3rd Gen.</TableHeaderItem>
-                </TableRow>
-              </thead>
-              <tbody>
-                <TableRow>
-                  <TableItem>Make</TableItem>
-                  <TableItem>Grunt</TableItem>
-                  <TableItem>Browserify</TableItem>
-                </TableRow>
-                <TableRow>
-                  <TableItem />
-                  <TableItem>Gulp</TableItem>
-                  <TableItem>Webpack</TableItem>
-                </TableRow>
-                <TableRow>
-                  <TableItem />
-                  <TableItem>Broccoli</TableItem>
-                  <TableItem>JSPM</TableItem>
-                </TableRow>
-              </tbody>
-            </Table>
-          </Layout>
         </Slide>
 
         <Slide transition={slideTransition}>
           <Heading size={1}>
-            The Problem of Template
+            Me and webpack I
           </Heading>
           <List>
-            <Appear><ListItem>Problem 1</ListItem></Appear>
-            <Appear><ListItem>Problem 2</ListItem></Appear>
-            <Appear><ListItem><Link href="https://facebook.github.io/flux/">Flux</Link> - Actions, stores, dispatcher</ListItem></Appear>
+            <Appear><ListItem>2013 - Started seeing <b>webpack.config.js</b> in projects</ListItem></Appear>
+            <Appear><ListItem>2013 - Started using <b>react-hot-loader</b> (one of the first users)</ListItem></Appear>
+            <Appear><ListItem>2014 October - Commented on Christian {"Alfoni's"} Blog</ListItem></Appear>
+            <Appear><ListItem>2015 January - Started developing webpack-cookbook with Christian</ListItem></Appear>
+            <Appear><ListItem>2015 March - Started working on SurviveJS book about React and webpack</ListItem></Appear>
           </List>
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Image src={images.survivejs} margin="40px auto" height="324px" />
+          <Heading size={1}>
+            Me and webpack II
+          </Heading>
+          <List>
+            <Appear><ListItem>2016 February - Self-published on paper</ListItem></Appear>
+            <Appear><ListItem>2016 April - Split to two separate books</ListItem></Appear>
+            <Appear><ListItem>2016 July - Became a part of <Link href="https://medium.com/webpack/webpack-its-getting-real-92c60fca1db1">webpack core team</Link></ListItem></Appear>
+            <Appear><ListItem>2017 January - Webpack 2</ListItem></Appear>
+            <Appear><ListItem>2017 March - Webpack book goes to paper</ListItem></Appear>
+          </List>
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Heading size={1}>
+            Why webpack became popular?
+          </Heading>
+          <List>
+            <Appear><ListItem>2014 - Noticed by Instagram (Pete Hunt)</ListItem></Appear>
+            <Appear><ListItem>2014 - Noticed by React community</ListItem></Appear>
+            <Appear><ListItem>2016 - Angular (in official docs)</ListItem></Appear>
+            <Appear><ListItem>Features: code splitting, Hot Module Replacement, and a lot more</ListItem></Appear>
+          </List>
         </Slide>
 
         <Slide transition={slideTransition}>
           <Heading size={2}>
-            Solution
+            Webpack
+          </Heading>
+          <Image src={images.webpackPopularity} margin="40px auto" height="364px" />
+          <Layout>
+            <Link href="https://npm-stat.com/charts.html?package=webpack&from=2014-03-19&to=2017-03-19">npm-stat.com</Link>
+          </Layout>
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Heading size={2}>
+            <Link href="https://www.npmjs.com/package/webpack-merge">webpack-merge</Link>
+          </Heading>
+          <Image src={images.webpackMergePopularity} margin="40px auto" height="364px" />
+          <Layout>
+            <Link href="https://npm-stat.com/charts.html?package=webpack-merge&from=2015-06-19&to=2017-03-19">npm-stat.com</Link>
+          </Layout>
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Heading size={2}>
+            Documentation
           </Heading>
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={4}>
-            Minimal Demo
-          </Heading>
-          <CodePane
-            lang="jsx"
-            source={require("raw-loader!../examples/demo.jsx")}
-            margin="20px auto"
+          <iframe
+            width="100%"
+            height="600px"
+            src="https://webpack.github.io/"
+          />
+        </Slide>
+
+        <Slide transition={slideTransition} bgColor="black">
+          <BlockQuote>
+            <Quote>Webpack documentation sucks</Quote>
+            <Cite>R. Ando</Cite>
+          </BlockQuote>
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <iframe
+            width="100%"
+            height="600px"
+            src="https://webpack.js.org/"
           />
         </Slide>
 
         <Slide transition={slideTransition}>
           <Heading size={1}>
-            Exercises
+            Re-inventing Documentation I
           </Heading>
           <List>
-            <Appear><ListItem>Exercise 1</ListItem></Appear>
-            <Appear><ListItem>*Exercise 2</ListItem></Appear>
-            <Appear><ListItem>**Exercise 3</ListItem></Appear>
+            <Appear><ListItem>2016 June - Development of <Link href="https://github.com/webpack/webpack.js.org">the new site</Link> begins</ListItem></Appear>
+            <Appear><ListItem>2016 December - New documentation MVP completed</ListItem></Appear>
+            <Appear><ListItem>Re-designed information architecture on top of Antwar</ListItem></Appear>
+            <Appear><ListItem>Community rallied around styling and content</ListItem></Appear>
           </List>
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Link href="http://www.survivejs.com/">
+          <Heading size={1}>
+            Re-inventing Documentation II
+          </Heading>
+          <List>
+            <Appear><ListItem>Hundreds of contributors since the beginning (over 600 PRs)</ListItem></Appear>
+            <Appear><ListItem>Hosted on top of GitHub Pages, automated deploys, heavy linting (links included)</ListItem></Appear>
+            <Appear><ListItem>Plugin/loader readme files are hosted through the site</ListItem></Appear>
+            <Appear><ListItem>Edits possible through GitHub UI</ListItem></Appear>
+            <Appear><ListItem><Link href="https://webpack.js.org/vote/">Vote to shape development</Link></ListItem></Appear>
+          </List>
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <iframe
+            width="100%"
+            height="600px"
+            src="https://antwar.js.org/"
+          />
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Heading size={2}>
+            From one developer to many
+          </Heading>
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Heading size={1}>
+            Scaling a Project
+          </Heading>
+          <List>
+            <Appear><ListItem>2012 March - Tobias starts developing webpack due to a rejected PR (<b>code splitting</b>)</ListItem></Appear>
+            <Appear><ListItem>2016 July - <Link href="https://medium.com/webpack/webpack-its-getting-real-92c60fca1db1">webpack core team</Link> was established</ListItem></Appear>
+            <Appear><ListItem>2016 October - <Link href="https://opencollective.com/webpack">Webpack open collective</Link> goes live. Joined <Link href="https://js.foundation/">JS Foundation</Link> as well and started a secret Slack for core discussions.</ListItem></Appear>
+            <Appear><ListItem>2017 January - Established <Link href="https://github.com/webpack-contrib">webpack-contrib</Link></ListItem></Appear>
+            <Appear><ListItem>2017 March - Open Collective has reached $80k annual funding</ListItem></Appear>
+          </List>
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Heading size={1}>
+            webpack-contrib
+          </Heading>
+          <List>
+            <Appear><ListItem>Separate effort from the core - Focus on third party packages</ListItem></Appear>
+            <Appear><ListItem>Started from three packages, grew to 40+ fast</ListItem></Appear>
+            <Appear><ListItem>Headed by a small but effective team</ListItem></Appear>
+            <Appear><ListItem>Years of tech debt to manage</ListItem></Appear>
+            <Appear><ListItem><Link href="https://github.com/webpack-contrib/webpack-defaults">webpack-defaults</Link> allows us to get there</ListItem></Appear>
+            <Appear><ListItem>Automation and discipline are needed (faster velocity, higher quality work)</ListItem></Appear>
+          </List>
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Heading size={1}>
+            Future
+          </Heading>
+          <List>
+            <Appear><ListItem>Push <b>webpack-defaults</b> to all contrib projects</ListItem></Appear>
+            <Appear><ListItem>Enable higher quality with less effort</ListItem></Appear>
+            <Appear><ListItem>Decrease the demand for support by improving webpack</ListItem></Appear>
+            <Appear><ListItem>Low hanging fruits in error reporting and debugging</ListItem></Appear>
+            <Appear><ListItem>Parallelism, WebAssembly, features community wants</ListItem></Appear>
+            <Appear><ListItem>Better funding to enable more work</ListItem></Appear>
+          </List>
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Link href="https://survivejs.com/webpack/">
             <Heading size={1}>
-              SurviveJS
+              SurviveJS - Webpack
             </Heading>
           </Link>
           <Image src={images.survivejs} margin="0px auto 40px" height="524px"/>
