@@ -7,7 +7,7 @@ import {
   Appear,
   BlockQuote,
   Cite,
-  //CodePane,
+  CodePane,
   Deck,
   //Fill,
   Heading,
@@ -64,21 +64,21 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={1}>
-            Me and webpack I
+          <Heading size={2}>
+            Me and webpack
           </Heading>
           <List>
             <Appear><ListItem>2013 - Started seeing <b>webpack.config.js</b> in projects</ListItem></Appear>
             <Appear><ListItem>2013 - Started using <b>react-hot-loader</b> (one of the first users)</ListItem></Appear>
             <Appear><ListItem>2014 October - Commented on Christian {"Alfoni's"} Blog</ListItem></Appear>
-            <Appear><ListItem>2015 January - Started developing webpack-cookbook with Christian</ListItem></Appear>
-            <Appear><ListItem>2015 March - Started working on SurviveJS book about React and webpack</ListItem></Appear>
+            <Appear><ListItem>2015 January - Started developing <b>webpack-cookbook</b> with Christian</ListItem></Appear>
+            <Appear><ListItem>2015 March - Started working on <b>SurviveJS</b> book about React and webpack</ListItem></Appear>
           </List>
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={1}>
-            Me and webpack II
+          <Heading size={2}>
+            Me and webpack
           </Heading>
           <List>
             <Appear><ListItem>2016 February - Self-published on paper</ListItem></Appear>
@@ -90,15 +90,29 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={1}>
+          <Heading size={2}>
             Why webpack became popular?
           </Heading>
           <List>
             <Appear><ListItem>2014 - Noticed by Instagram (Pete Hunt)</ListItem></Appear>
             <Appear><ListItem>2014 - Noticed by React community</ListItem></Appear>
             <Appear><ListItem>2016 - Angular (in official docs)</ListItem></Appear>
-            <Appear><ListItem>Features: code splitting, Hot Module Replacement, and a lot more</ListItem></Appear>
+            <Appear><ListItem>Features: <b>code splitting</b>, Hot Module Replacement, and a lot more</ListItem></Appear>
           </List>
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Heading size={2}>
+            <code>import()</code>
+          </Heading>
+          <CodePane lang="javascript">
+            {`import('./module').then(
+  (module) => {...}
+).catch(
+  (error) => {...}
+);
+`}
+          </CodePane>
         </Slide>
 
         <Slide transition={slideTransition}>
@@ -151,26 +165,27 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={1}>
-            Re-inventing Documentation I
+          <Heading size={2}>
+            Re-inventing Documentation
           </Heading>
           <List>
             <Appear><ListItem>2016 June - Development of <Link href="https://github.com/webpack/webpack.js.org">the new site</Link> begins</ListItem></Appear>
             <Appear><ListItem>2016 December - New documentation MVP completed</ListItem></Appear>
-            <Appear><ListItem>Re-designed information architecture on top of Antwar</ListItem></Appear>
+            <Appear><ListItem>Re-designed information architecture on top of <Link href="https://antwar.js.org/">Antwar</Link></ListItem></Appear>
             <Appear><ListItem>Community rallied around styling and content</ListItem></Appear>
+            <Appear><ListItem>Heavy focus on process (linting, removing human effort)</ListItem></Appear>
           </List>
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={1}>
-            Re-inventing Documentation II
+          <Heading size={2}>
+            Re-inventing Documentation
           </Heading>
           <List>
             <Appear><ListItem>Hundreds of contributors since the beginning (over 600 PRs)</ListItem></Appear>
             <Appear><ListItem>Hosted on top of GitHub Pages, automated deploys, heavy linting (links included)</ListItem></Appear>
             <Appear><ListItem>Plugin/loader readme files are hosted through the site</ListItem></Appear>
-            <Appear><ListItem>Edits possible through GitHub UI</ListItem></Appear>
+            <Appear><ListItem>Edits possible through GitHub UI (edit buttons at the site)</ListItem></Appear>
             <Appear><ListItem><Link href="https://webpack.js.org/vote/">Vote to shape development</Link></ListItem></Appear>
           </List>
         </Slide>
@@ -190,7 +205,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={1}>
+          <Heading size={2}>
             Scaling a Project
           </Heading>
           <List>
@@ -203,7 +218,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={1}>
+          <Heading size={2}>
             webpack-contrib
           </Heading>
           <List>
@@ -217,7 +232,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={1}>
+          <Heading size={2}>
             Future
           </Heading>
           <List>
