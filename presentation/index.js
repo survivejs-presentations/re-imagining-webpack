@@ -90,7 +90,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={slideTransition}>
-          <Heading size={2}>
+          <Heading size={2} fit>
             Why webpack became popular?
           </Heading>
           <List>
