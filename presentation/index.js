@@ -110,8 +110,7 @@ export default class Presentation extends React.Component {
   (module) => {...}
 ).catch(
   (error) => {...}
-);
-`}
+);`}
           </CodePane>
         </Slide>
 
@@ -182,7 +181,7 @@ export default class Presentation extends React.Component {
             Re-inventing Documentation
           </Heading>
           <List>
-            <Appear><ListItem>Hundreds of contributors since the beginning (over 600 PRs)</ListItem></Appear>
+            <Appear><ListItem>Hundreds of contributors since the beginning (over 700 PRs)</ListItem></Appear>
             <Appear><ListItem>Hosted on top of GitHub Pages, automated deploys, heavy linting (links included)</ListItem></Appear>
             <Appear><ListItem>Plugin/loader readme files are hosted through the site</ListItem></Appear>
             <Appear><ListItem>Edits possible through GitHub UI (edit buttons at the site)</ListItem></Appear>
@@ -213,7 +212,8 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>2016 July - <Link href="https://medium.com/webpack/webpack-its-getting-real-92c60fca1db1">webpack core team</Link> was established</ListItem></Appear>
             <Appear><ListItem>2016 October - <Link href="https://opencollective.com/webpack">Webpack open collective</Link> goes live. Joined <Link href="https://js.foundation/">JS Foundation</Link> as well and started a secret Slack for core discussions.</ListItem></Appear>
             <Appear><ListItem>2017 January - Established <Link href="https://github.com/webpack-contrib">webpack-contrib</Link></ListItem></Appear>
-            <Appear><ListItem>2017 March - Open Collective has reached $80k annual funding</ListItem></Appear>
+            <Appear><ListItem>2017 March - Open Collective has reached $80k annually</ListItem></Appear>
+            <Appear><ListItem>2017 April - Tobias goes full-time on webpack</ListItem></Appear>
           </List>
         </Slide>
 
@@ -228,6 +228,19 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>Years of tech debt to manage</ListItem></Appear>
             <Appear><ListItem><Link href="https://github.com/webpack-contrib/webpack-defaults">webpack-defaults</Link> allows us to get there</ListItem></Appear>
             <Appear><ListItem>Automation and discipline are needed (faster velocity, higher quality work)</ListItem></Appear>
+          </List>
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Heading size={2}>
+            webpack-defaults
+          </Heading>
+          <List>
+            <Appear><ListItem><b>npm install webpack-defaults --save-dev</b></ListItem></Appear>
+            <Appear><ListItem><b>npm run webpack-defaults</b></ListItem></Appear>
+            <Appear><ListItem>To update, treat as a npm package and run again</ListItem></Appear>
+            <Appear><ListItem>Powered by <Link href="https://github.com/sapegin/mrm">mrm</Link></ListItem></Appear>
+            <Appear><ListItem>Think it as <b>a migration tool</b> for project configuration</ListItem></Appear>
           </List>
         </Slide>
 
