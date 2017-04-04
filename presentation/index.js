@@ -39,6 +39,7 @@ require("./custom.css");
 
 const slideTransition = ["slide"];
 const images = mapValues({
+  codesplitting: require("../images/codesplitting.png"),
   survivejs: require("../images/survivejs.png"),
   webpackPopularity: require("../images/webpack-popularity.png"),
   webpackMergePopularity: require("../images/webpack-merge-popularity.png")
@@ -112,6 +113,10 @@ export default class Presentation extends React.Component {
   (error) => {...}
 );`}
           </CodePane>
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Image src={images.codesplitting} margin="40px auto" height="364px" />
         </Slide>
 
         <Slide transition={slideTransition}>
