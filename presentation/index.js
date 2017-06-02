@@ -100,7 +100,7 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>2014 - Noticed by React community</ListItem></Appear>
             <Appear><ListItem>2016 - Angular (in official docs)</ListItem></Appear>
             <Appear><ListItem>2017 - Vue, <Link href="https://core.trac.wordpress.org/ticket/40894">WordPress</Link> adopts webpack</ListItem></Appear>
-            <Appear><ListItem>Features: <b>code splitting</b>, Hot Module Replacement, …</ListItem></Appear>
+            <Appear><ListItem>Features: code splitting, Hot Module Replacement, …</ListItem></Appear>
           </List>
         </Slide>
 
