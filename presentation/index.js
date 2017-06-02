@@ -69,11 +69,12 @@ export default class Presentation extends React.Component {
             Me and webpack
           </Heading>
           <List>
+            <Appear><ListItem>2012 March - Tobias starts developing webpack due to a rejected PR (<b>code splitting</b>)</ListItem></Appear>
             <Appear><ListItem>2013 - Started seeing <b>webpack.config.js</b> in projects</ListItem></Appear>
             <Appear><ListItem>2013 - Started using <b>react-hot-loader</b> (one of the first users)</ListItem></Appear>
             <Appear><ListItem>2014 October - Commented on Christian {"Alfoni's"} Blog</ListItem></Appear>
-            <Appear><ListItem>2015 January - Started developing <b>webpack-cookbook</b> with Christian</ListItem></Appear>
-            <Appear><ListItem>2015 March - Started working on <b>SurviveJS</b> book about React and webpack</ListItem></Appear>
+            <Appear><ListItem>2015 January - Started developing <b>webpack-cookbook</b></ListItem></Appear>
+            <Appear><ListItem>2015 March - Started working on the first <b>SurviveJS</b> book</ListItem></Appear>
           </List>
         </Slide>
 
@@ -98,7 +99,8 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>2014 - Noticed by Instagram (Pete Hunt)</ListItem></Appear>
             <Appear><ListItem>2014 - Noticed by React community</ListItem></Appear>
             <Appear><ListItem>2016 - Angular (in official docs)</ListItem></Appear>
-            <Appear><ListItem>Features: <b>code splitting</b>, Hot Module Replacement, and a lot more</ListItem></Appear>
+            <Appear><ListItem>2017 - Vue, <Link href="https://core.trac.wordpress.org/ticket/40894">WordPress</Link> adopts webpack</ListItem></Appear>
+            <Appear><ListItem>Features: <b>code splitting</b>, Hot Module Replacement, …</ListItem></Appear>
           </List>
         </Slide>
 
@@ -213,12 +215,12 @@ export default class Presentation extends React.Component {
             Scaling a Project
           </Heading>
           <List>
-            <Appear><ListItem>2012 March - Tobias starts developing webpack due to a rejected PR (<b>code splitting</b>)</ListItem></Appear>
             <Appear><ListItem>2016 July - <Link href="https://medium.com/webpack/webpack-its-getting-real-92c60fca1db1">webpack core team</Link> was established</ListItem></Appear>
             <Appear><ListItem>2016 October - <Link href="https://opencollective.com/webpack">Webpack open collective</Link> goes live. Joined <Link href="https://js.foundation/">JS Foundation</Link> as well and started a secret Slack for core discussions.</ListItem></Appear>
             <Appear><ListItem>2017 January - Established <Link href="https://github.com/webpack-contrib">webpack-contrib</Link></ListItem></Appear>
             <Appear><ListItem>2017 March - Open Collective has reached $80k annually</ListItem></Appear>
             <Appear><ListItem>2017 April - Tobias goes full-time on webpack</ListItem></Appear>
+            <Appear><ListItem>2017 May - Mozilla sponsorship ($150k) towards WASM</ListItem></Appear>
           </List>
         </Slide>
 
@@ -259,7 +261,6 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>Decrease the demand for support by improving webpack</ListItem></Appear>
             <Appear><ListItem>Low hanging fruits in error reporting and debugging</ListItem></Appear>
             <Appear><ListItem>Parallelism, WebAssembly, features community wants</ListItem></Appear>
-            <Appear><ListItem>Better funding to enable more work</ListItem></Appear>
           </List>
         </Slide>
 
