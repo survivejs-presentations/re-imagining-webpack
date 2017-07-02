@@ -88,6 +88,8 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>2016 July - Became a part of <Link href="https://medium.com/webpack/webpack-its-getting-real-92c60fca1db1">webpack core team</Link></ListItem></Appear>
             <Appear><ListItem>2017 January - Webpack 2</ListItem></Appear>
             <Appear><ListItem>2017 March - Webpack book goes to paper</ListItem></Appear>
+            <Appear><ListItem>2017 May - Finnish Code Ambassador at <Link href="https://www.bluearrowawards.com/">Blue Arrow Awards</Link></ListItem></Appear>
+            <Appear><ListItem>2017 June - Webpack 3</ListItem></Appear>
           </List>
         </Slide>
 
@@ -219,8 +221,17 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>2016 October - <Link href="https://opencollective.com/webpack">Webpack open collective</Link> goes live. Joined <Link href="https://js.foundation/">JS Foundation</Link> as well and started a secret Slack for core discussions.</ListItem></Appear>
             <Appear><ListItem>2017 January - Established <Link href="https://github.com/webpack-contrib">webpack-contrib</Link></ListItem></Appear>
             <Appear><ListItem>2017 March - Open Collective has reached $80k annually</ListItem></Appear>
+          </List>
+        </Slide>
+
+        <Slide transition={slideTransition}>
+          <Heading size={2}>
+            Scaling a Project
+          </Heading>
+          <List>
             <Appear><ListItem>2017 April - Tobias goes full-time on webpack</ListItem></Appear>
-            <Appear><ListItem>2017 May - Mozilla sponsorship ($150k) towards WASM</ListItem></Appear>
+            <Appear><ListItem>2017 May - Mozilla sponsorship ($125k) towards WASM announced</ListItem></Appear>
+            <Appear><ListItem>2017 July - Open collective has reached $100k annually</ListItem></Appear>
           </List>
         </Slide>
 
@@ -233,8 +244,8 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>Started from three packages, grew to 40+ fast</ListItem></Appear>
             <Appear><ListItem>Headed by a small but effective team</ListItem></Appear>
             <Appear><ListItem>Years of tech debt to manage</ListItem></Appear>
-            <Appear><ListItem><Link href="https://github.com/webpack-contrib/webpack-defaults">webpack-defaults</Link> allows us to get there</ListItem></Appear>
             <Appear><ListItem>Automation and discipline are needed (faster velocity, higher quality work)</ListItem></Appear>
+            <Appear><ListItem><Link href="https://github.com/webpack-contrib/webpack-defaults">webpack-defaults</Link> allows us to get there</ListItem></Appear>
           </List>
         </Slide>
 
